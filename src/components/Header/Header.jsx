@@ -1,14 +1,15 @@
 import Button from "../Button/Button";
 import "./header.scss";
 import logo from '../../assets/logo.svg';
-import headerImage from '../../assets/header_pict.png';
+import headerImage from '../../assets/header_img.png';
+import burger_icon from '../../assets/burger_icon.svg';
 
 export default function Header() {
   return (
     <header className="header_wrapper">
       <div className="container">
         <div className="header">
-         <img src={logo}/>
+         <a href="#"><img src={logo}/></a>
           <div className="nav">
             <a href="#">features</a>
             <a href="#">Pricing</a>
@@ -19,6 +20,7 @@ export default function Header() {
           <Button content="Sign In" color='transparent' FontFace='regular' size='header_btn'/>
           <Button content="Sign up" color='transparent' FontFace='regular' size='header_btn'/>
          </div>
+         <img src={burger_icon} alt="burger_icon" className="burger_icon" />
         </div>
         <div className="header_content">
           <div className="header_text">
@@ -29,9 +31,6 @@ export default function Header() {
           <div className="header_img">
             <img src={headerImage}/>
           </div>
-        </div>
-        <div className="header_info">
-
         </div>
       </div>
     </header>

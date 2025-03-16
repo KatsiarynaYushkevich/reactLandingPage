@@ -19,68 +19,72 @@ $text_color: #2B2B2B;
   font-weight: $f_weight;
 }
 
+.container {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
 .header_wrapper {
     background-color: #fff;
-
-    .container {
-      width: 80%;
-      margin: 0 auto;
-    }
-
-    img{
-      min-width: 126px;
-      min-height: 24px;
-    }
 
     a{
       text-decoration: none;
       font-family: 'Rubik';
       color:#2B2B2B;
+      @include header_text_style(clamp(0.75rem, 0.4667rem + 0.58vw, 1rem), 400);
     }
   }
 
 .nav{
   display: flex;
-  column-gap: 56px;
+  gap: clamp(15px, 4vw + 1px, 56px);
 }
 
 .header_content{
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 10px;
   margin-bottom: 67px;
 }
 
 .header{
-  width: 85%;
-  min-height: 66px;
+  max-width: 1000px;
+  min-height: clamp(24px, 2vw + 8px, 36px);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 98px;
+  margin-bottom:clamp(24px, 6vw + 12px, 98px);
+  margin-top: clamp(15px, 2vw + 2px, 30px);
+
 }
 
 .header_text{
-  max-width: 553px;
+  max-width: clamp(355px, 39vw,553px);
   display: flex;
   flex-direction: column;
-  row-gap: 42px;
+  gap: clamp(10px,4vw - 2px, 42px);
   h1{
-    @include header_text_style(50px, 400);
+    @include header_text_style(clamp(32px, 4vw - 7px, 50px), 400);
     span{
-      @include header_text_style(50px, 600);
+      @include header_text_style(clamp(32px, 4vw - 7px, 50px), 600);
     }
   }
 
   p{
-    @include header_text_style(16px, 400);
+    @include header_text_style(clamp(10px, 1vw + 2px, 16px), 400);
     margin-bottom: 16px;
   }
 }
 
+.header_buttons{
+  display: flex;
+  gap:clamp(10px, 1vw + 1px, 15px)
+}
+
 .header_img{
-  min-width: 569px;
-  min-height: 356px;
+  max-width:clamp(306px, 40vw, 569px);
+  max-height: 356px;
   border: 1px solid #2B2B2B;
 
   img{
@@ -89,3 +93,49 @@ $text_color: #2B2B2B;
   }
 }
 
+.burger_icon{
+  display: none;
+  max-width: 24px;
+  max-height: 24px;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 750px) {
+  .nav, .header_btn{
+    display: none;
+  }
+
+  .header{
+    width: 100%;
+  }
+
+  .burger_icon{
+    display: block;
+  }
+
+  .header_content{
+    flex-direction: column-reverse;
+    align-items: center;
+    gap:34px;
+  }
+
+  .header_text{
+    max-width: clamp(355px, 80%, 553px);
+    align-items: center;
+    text-align: center;
+
+    button{
+      min-width: clamp(124px, 17vw + 6px, 250px); 
+    }
+  }
+
+  .header_img{
+    max-width:clamp(306px, 80%, 569px);
+    border: none;
+  }
+}

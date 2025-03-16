@@ -19,17 +19,11 @@ font-size: $font_size;
 font-family: Rubik;
 }
 
-button{
+.custom_btn{    
     border: none;    
     cursor: pointer;  
-}
-
-.custom_btn{
-    border-radius: 3px;
-    min-width: 193px;
-    min-height: 54px;
-    border-radius: 20px;
-    @include btn_text_style(18px, $main_text_color);
+    border-radius: clamp(12px, 1vw + 6px, 20px);
+    @include btn_text_style(clamp(12px, 1vw + 4px, 18px), $main_text_color);
 
 &.red{
     background-color: #F53838;
@@ -48,14 +42,14 @@ button{
 }
 
 &.header_txt_btn{
- max-width: 193px;
- max-height: 54px;
+    max-width: clamp(124px, 13vw + 6px, 193px); 
+    min-height: clamp(35px, 4vw + 7px, 54px);
 }
 
 &.header_btn{
-    min-width: 101px;
-    min-height: 36px;
-    @include btn_text_style(16px, $sub_text_color);
+    min-width: clamp(70px, 7vw + 1px, 101px);
+    min-height:  clamp(24px, 2vw + 8px, 36px);
+    @include btn_text_style(clamp(12px, 1vw + 2px, 16px), $sub_text_color);
     
     &:hover{
     border: 2px solid #F53838;
@@ -63,4 +57,5 @@ button{
 }
 }
 }
+
 
