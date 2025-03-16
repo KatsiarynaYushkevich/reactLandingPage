@@ -1,0 +1,66 @@
+@font-face {
+    font-family: 'Rubik';
+    font-weight: 400; 
+    src: url('../../assets/Rubik-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Rubik';
+    font-weight: 600;
+    src: url('../../assets/Rubik-SemiBold.ttf') format('truetype');
+}
+
+$main_text_color: #fff;
+$sub_text_color: #2B2B2B;
+
+@mixin btn_text_style($font_size, $font_color){
+color: $font_color;
+font-size: $font_size;    
+font-family: Rubik;
+}
+
+button{
+    border: none;    
+    cursor: pointer;  
+}
+
+.custom_btn{
+    border-radius: 3px;
+    min-width: 193px;
+    min-height: 54px;
+    border-radius: 20px;
+    @include btn_text_style(18px, $main_text_color);
+
+&.red{
+    background-color: #F53838;
+}
+
+&.transparent{
+    background-color: transparent;
+}
+
+&.semi_bold{
+    font-weight: 600;
+}
+
+&.regular{
+    font-weight:400;
+}
+
+&.header_txt_btn{
+ max-width: 193px;
+ max-height: 54px;
+}
+
+&.header_btn{
+    min-width: 101px;
+    min-height: 36px;
+    @include btn_text_style(16px, $sub_text_color);
+    
+    &:hover{
+    border: 2px solid #F53838;
+    color: #F53838;
+}
+}
+}
+
