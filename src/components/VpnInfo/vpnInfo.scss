@@ -1,0 +1,52 @@
+
+@font-face {
+    font-family: 'Rubik';
+    font-weight: 400; 
+    src: url('../../assets/Rubik-Regular.ttf') format('truetype');
+}
+  
+@font-face {
+    font-family: 'Rubik';
+    font-weight: 600;
+    src: url('../../assets/Rubik-SemiBold.ttf') format('truetype');
+}
+
+$font_family:'Rubik';
+$text_color: #2B2B2B;
+$sub_text_color: #646464;
+  
+@mixin vpn_info_text_style($f_size: 20px, $f_weight: 400, $f_color) {
+    font-family: $font_family;
+    color: $f_color;
+    font-size: $f_size;
+    font-weight: $f_weight;
+}
+
+.vpn_info{
+    display: flex;
+    gap:clamp(13px, 1vw + 9px, 23px);
+}
+
+.vpn_img{
+    max-width: clamp(21px, 2vw + 9px, 37px);
+    max-height: clamp(21px, 2vw + 9px, 37px);
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+.vpn_info_text{
+    display: flex;
+    flex-direction: column;
+    gap: 2.25px;
+
+    &.regular{
+        @include vpn_info_text_style(clamp(8.5px, 1vw + 1px, 15px), 400, $sub_text_color);
+    }
+
+    &.semi_bold{
+        @include vpn_info_text_style(clamp(11px, 1vw + 6px, 20px), 600, $text_color);
+    }
+}

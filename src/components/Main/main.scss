@@ -1,5 +1,51 @@
-.wr_main {
-    height: 40vh;
-    background-color:cornflowerblue;
-  }
-  
+@font-face {
+  font-family: 'Rubik';
+  font-weight: 400; 
+  src: url('../../assets/Rubik-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Rubik';
+  font-weight: 600;
+  src: url('../../assets/Rubik-SemiBold.ttf') format('truetype');
+}
+
+$text_color: #2B2B2B;
+
+@mixin main_text_style($f_size, $f_weight) {
+  font-family: 'Rubik';
+  color: $text_color;
+  font-size: $f_size;
+  font-weight: $f_weight;
+}
+
+.container {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+main{
+  margin-top: clamp(28px, 4vw + 10px,67px);
+}
+
+.vpn{
+  max-width: clamp(331px, 57vw - 1px,820px);
+  min-height: clamp(65px, 8vw - 2px, 114px);
+  display:flex;
+  align-items: center;
+  gap:clamp(52px, 13vw + 3px, 190px);
+  margin: auto;
+  box-shadow: 7px 13px 35px rgba(174, 174, 174, 0.5);
+  margin-bottom: clamp(18px, 4vw + 2px, 60px);
+}
+
+.features_wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.features_list{
+  display: flex;
+  flex-direction: column;
+  gap:clamp(13.5px, 1vw + 7px, 21px);
+}

@@ -26,6 +26,7 @@ $text_color: #2B2B2B;
 
 .header_wrapper {
     background-color: #fff;
+    margin-bottom: clamp(18px, 4vw + 10px, 67px);
 
     a{
       text-decoration: none;
@@ -45,7 +46,6 @@ $text_color: #2B2B2B;
   align-items: center;
   justify-content: space-between;
   gap: 10px;
-  margin-bottom: 67px;
 }
 
 .header{
@@ -79,7 +79,7 @@ $text_color: #2B2B2B;
 
 .header_buttons{
   display: flex;
-  gap:clamp(10px, 1vw + 1px, 15px)
+  gap:clamp(10px, 1vw + 1px, 15px);
 }
 
 .header_img{

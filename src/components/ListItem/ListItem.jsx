@@ -1,0 +1,13 @@
+import circle_icon from "../../assets/circle_icon.svg"
+import "./list_item.scss";
+
+export default function ListItem(props) {
+  return (
+    <div className="item">
+      <div className="item_img">
+        <img src={circle_icon} alt="circle_icon" />
+      </div>
+      <p className={props.f_weigth}>{props.text}</p>
+    </div>
+  );
+}
