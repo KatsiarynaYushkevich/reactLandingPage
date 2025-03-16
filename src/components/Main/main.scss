@@ -49,3 +49,14 @@ main{
   flex-direction: column;
   gap:clamp(13.5px, 1vw + 7px, 21px);
 }
+
+@media (max-width: 750px) {
+  .container {
+    max-width: 90%;
+  }
+
+  .features_wrapper{
+    flex-direction: column;
+    gap:28px;
+  }
+}
