@@ -1,7 +1,7 @@
 import VpnInfo from "../VpnInfo/VpnInfo"
 import Features from "../Features/Features"
 import Plan from "../Plan/Plan"
-import SectionHeader from "../SectionHeader/SectionHeader"
+import Rewiews from "../Reviews/Reviews"
 import users_icon from "../../assets/vpn_info_assets/users_icon.svg"
 import locations_icon from "../../assets/vpn_info_assets/locations_icon.svg"
 import servers_icon from "../../assets/vpn_info_assets/servers_icon.svg"
@@ -26,6 +26,9 @@ export default function Main() {
     </section>
     <section className="network_wrapper container">
       <Network></Network>
+    </section>
+    <section className="reviews_wrapper review_container">
+      <Rewiews></Rewiews>
     </section>
     </main>
   );

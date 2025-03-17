@@ -1,0 +1,100 @@
+@font-face {
+    font-family: 'Rubik';
+    font-weight: 400; 
+    src: url('../../assets/Rubik-Regular.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Rubik';
+    font-weight: 600;
+    src: url('../../assets/Rubik-SemiBold.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Rubik';
+    font-weight: 500;
+    src: url('../../assets/Rubik-Medium.ttf') format('truetype');
+  }
+
+  $text_color: #2B2B2B;
+  $sub_text_color:#7B7B7B;
+  $third_text_color: #5A5A5A;
+  $border_color: #f53838;
+  $font_family:'Rubik';
+  
+  @mixin text_style($f_size, $f_weight, $color) {
+    font-family: $font_family;
+    color: $color;
+    font-size: $f_size;
+    font-weight: $f_weight;
+  }
+
+.review_wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: clamp(258px, 28vw, 400px);
+    min-height: clamp(129px, 14vw, 202px);
+    border: 2px solid #CCCCCC;
+    border-radius: 13px;
+    &:hover {
+        border: 2px solid $border_color;
+        color: $border_color;
+      } 
+}
+
+.review{
+    display: flex;
+    flex-direction: column;
+    gap:clamp(13px, 1vw + 6px, 21px);
+    max-width: clamp(210px, 23vw - 2px, 329px);
+}
+
+.person{
+    display: flex;
+    align-items: center;
+    gap:clamp(18px, 2vw - 1px, 28px);
+}
+
+.person_img{
+    max-width: clamp(41px, 4vw + 7px, 64px);
+    max-height: clamp(41px, 4vw + 7px, 64px);
+
+    img{
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.person_info{    
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.person_name{
+    @include text_style(clamp(11.5px, 1vw + 8px, 22px), 600,  $text_color);
+}
+
+.location{
+    display: flex;
+    justify-content: space-between;
+
+    p{
+        @include text_style(clamp(11.5px, 1vw + 1px, 15px), 400,  $sub_text_color);
+    }
+
+    span{
+        @include text_style(clamp(10px, 1vw + 1px, 15px), 500,  $sub_text_color);
+    }
+}
+
+.mark{
+    display: flex;
+    gap: 10px;
+}
+
+.review_text{
+    @include text_style(clamp(10px, 1vw + 2px, 16px), 400,  $third_text_color);
+}

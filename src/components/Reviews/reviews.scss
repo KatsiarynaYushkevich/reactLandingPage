@@ -1,0 +1,45 @@
+.reviews{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap:clamp(11.5px, 1vw + 4px, 18px);
+    overflow: auto;
+    ::-webkit-scrollbar { display: none; }
+    margin-bottom: clamp(21px, 2vw - 1px, 27px);
+}  
+
+
+.buttons{
+    display: flex;
+    gap: 6px;
+    img{
+        max-width: clamp(36px,4vw + 1px,58px);
+        max-height: clamp(9px, 1vw, 13px);
+    }
+}
+.back_btn{
+    background-image: url("../../assets/reviews_assets/circle-right.svg");
+}
+
+.forward_btn{
+    background-image: url("../../assets/reviews_assets/circle-right-red.svg");
+}
+
+.arrows{
+    display: flex;
+    gap: clamp(28px, 3vw - 1px, 42px);
+}
+.scroll_buttons{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    button{
+    min-width: clamp(25px,3vw + 3px, 45px);
+    min-height:  clamp(25px,3vw + 3px, 45px);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    border: none;
+    }
+}

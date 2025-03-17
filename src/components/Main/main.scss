@@ -1,27 +1,14 @@
-@font-face {
-  font-family: 'Rubik';
-  font-weight: 400; 
-  src: url('../../assets/Rubik-Regular.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Rubik';
-  font-weight: 600;
-  src: url('../../assets/Rubik-SemiBold.ttf') format('truetype');
-}
-
-$text_color: #2B2B2B;
-
-@mixin main_text_style($f_size, $f_weight) {
-  font-family: 'Rubik';
-  color: $text_color;
-  font-size: $f_size;
-  font-weight: $f_weight;
-}
-
 .container {
   max-width: 80%;
   margin: 0 auto;
+}
+
+.review_container{
+  max-width: 86%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 main{
@@ -66,6 +53,10 @@ margin-bottom: clamp(50px, 6vw + 5px, 91px);
   gap:clamp(25px, 3vw + 7px, 50px);
   align-items: center;
   margin-bottom: clamp(45px, 5vw + 2px, 75px);
+}
+
+.reviews_wrapper{
+  margin-bottom: clamp(58px,6vw + 2px, 88px);
 }
 
 @media (max-width: 750px) {
