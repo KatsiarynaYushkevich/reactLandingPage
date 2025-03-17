@@ -73,6 +73,7 @@
   gap:clamp(12px, 1vw + 10px, 22px);
 
   span{
+    text-align: center;
     @include text_style(clamp(15px, 2vw - 1px,28px), 600);
 
     &.regular{

@@ -57,6 +57,15 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
+margin-bottom: clamp(50px, 6vw + 5px, 91px);
+}
+
+.network_wrapper{
+  display: flex;
+  flex-direction: column;
+  gap:clamp(25px, 3vw + 7px, 50px);
+  align-items: center;
+  margin-bottom: clamp(45px, 5vw + 2px, 75px);
 }
 
 @media (max-width: 750px) {

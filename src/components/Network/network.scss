@@ -1,0 +1,9 @@
+.map_img{
+min-width: clamp(311px, 73vw + 9px,1060px);
+min-height: clamp(158px, 37vw + 6px,539px);
+
+img{
+    width: 100%;
+    height: 100%;
+}
+}

@@ -26,7 +26,7 @@ export default function PlanCard(props) {
         <span>{props.price} 
         <span className="regular">{props.time}</span>
         </span>
-        <Button content="Select" color="red" FontFace='semi_bold' size='plan_card_btn'/>
+        <Button content="Select" color="red" FontFace='semi_bold' size='card_btn'/>
         </div>
         </div>
         </div>
