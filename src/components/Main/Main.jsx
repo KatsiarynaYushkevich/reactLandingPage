@@ -1,5 +1,6 @@
-import VpnInfo from "../VpnInfo/VpnInfo";
-import Features from "../Features/Features.jsx"
+import VpnInfo from "../VpnInfo/VpnInfo"
+import Features from "../Features/Features"
+import Plan from "../Plan/Plan"
 import users_icon from "../../assets/vpn_info_assets/users_icon.svg"
 import locations_icon from "../../assets/vpn_info_assets/locations_icon.svg"
 import servers_icon from "../../assets/vpn_info_assets/servers_icon.svg"
@@ -18,6 +19,9 @@ export default function Main() {
     </section>
     <section className="features_wrapper">
       <Features></Features>
+    </section>
+    <section className="plans">
+      <Plan></Plan>
     </section>
     </div>
     </main>

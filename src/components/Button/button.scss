@@ -55,6 +55,11 @@ font-family: Rubik;
     border: 2px solid #F53838;
     color: #F53838;
 }
+
+&.plan_card__btn{
+    min-width: clamp(95px, 12vw, 173px); 
+    min-height: clamp(25px, 3vw + 2px, 45px);
+}
 }
 }
 

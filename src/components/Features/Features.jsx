@@ -11,10 +11,10 @@ export default function Features(props) {
         <h2>We provide many features you can use</h2>
         <p>Lorem ipsum dolor sit amet consectetur. Quis tortor gravida nibh arcu id purus ullamcorper. Vel vel erat semper augue.</p>
         <div className="features_list">
-            <ListItem f_weigth='semi_bold' text='Powerfull online protection.'/>
-            <ListItem f_weigth='semi_bold' text='Internet with borders'/>
-            <ListItem f_weigth='semi_bold' text='Supercharged VPN'/>
-            <ListItem f_weigth='semi_bold' text='No specific time limits'/>
+            <ListItem hidden='visible' f_weigth='semi_bold' text='Powerfull online protection.'/>
+            <ListItem hidden='visible' f_weigth='semi_bold' text='Internet with borders'/>
+            <ListItem hidden='visible' f_weigth='semi_bold' text='Supercharged VPN'/>
+            <ListItem hidden='visible' f_weigth='semi_bold' text='No specific time limits'/>
         </div>
       </div>
     </>

@@ -3,7 +3,7 @@ import "./list_item.scss";
 
 export default function ListItem(props) {
   return (
-    <div className="item">
+    <div className={`item ${props.hidden}`}>
       <div className="item_img">
         <img src={circle_icon} alt="circle_icon" />
       </div>
