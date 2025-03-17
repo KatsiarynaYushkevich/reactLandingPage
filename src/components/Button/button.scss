@@ -13,11 +13,12 @@
 $main_text_color: #fff;
 $sub_text_color: #2b2b2b;
 $bg_color: #f53838;
+$font_family: 'Rubik';
 
 @mixin btn_text_style($font_size, $font_color) {
   color: $font_color;
   font-size: $font_size;
-  font-family: Rubik;
+  font-family: $font_family;
 }
 
 .custom_btn {
@@ -55,12 +56,17 @@ $bg_color: #f53838;
     &:hover {
       border: 2px solid $bg_color;
       color: $bg_color;
-    } 
- }
-
-    &.card_btn {
-      min-width: clamp(95px, 12vw, 173px);
-      min-height: clamp(25px, 3vw + 2px, 45px);
     }
+  }
 
+  &.card_btn {
+    min-width: clamp(95px, 12vw, 173px);
+    min-height: clamp(25px, 3vw + 2px, 45px);
+  }
+
+  &.subscribe_btn{
+    min-width: 244px;
+    min-height: 57px;
+    font-size: 18px;
+  }
 }

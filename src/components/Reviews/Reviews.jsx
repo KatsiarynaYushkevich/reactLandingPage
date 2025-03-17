@@ -18,12 +18,12 @@ export default function Rewiews(props) {
         turned out to be more than my expectations
         and so far there have been no problems.
         laslesvpn always the best”.'/>
-         <RewiewBlock person_img={person2} location='Warsaw,pland' personName='Brooklyn Simmons' mark='4.5'
+         <RewiewBlock person_img={person2} location='Warsaw,pland' personName='Darlene Robertson' mark='4.5'
         text='“wow...iam very happy to use this vpn,it
         turned out to be more than my expectations
         and so far there have been no problems.
         laslesvpn always the best”.'/>
-         <RewiewBlock person_img={person3} location='Warsaw,pland' personName='Brooklyn Simmons' mark='4.5'
+         <RewiewBlock person_img={person3} location='Warsaw,pland' personName='Darrell Steward' mark='4.5'
         text='“wow...iam very happy to use this vpn,it
         turned out to be more than my expectations
         and so far there have been no problems.
@@ -35,8 +35,8 @@ export default function Rewiews(props) {
         <img src={dots}/>
         </div>
         <div className="arrows">
-        <button className="back_btn"></button>
-        <button className="forward_btn"></button>
+        <button className="back_btn"/>
+        <button className="forward_btn"/>
         </div>
       </div>
       </>

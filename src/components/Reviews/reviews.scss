@@ -2,7 +2,7 @@
     width: 100%;
     display: flex;
     align-items: center;
-    gap:clamp(11.5px, 1vw + 4px, 18px);
+    gap:clamp(11.5px, 1vw + 4px, 16px);
     overflow: auto;
     ::-webkit-scrollbar { display: none; }
     margin-bottom: clamp(21px, 2vw - 1px, 27px);
