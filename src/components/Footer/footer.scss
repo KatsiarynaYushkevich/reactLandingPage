@@ -1,8 +1,96 @@
-.wr_footer {
-    .container {
-      width: 90%;
-      height: 10vh;
-      background-color: red;
-    }
+@font-face {
+  font-family: "Rubik";
+  font-weight: 400;
+  src: url("../../assets/Rubik-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Rubik";
+  font-weight: 600;
+  src: url("../../assets/Rubik-SemiBold.ttf") format("truetype");
+}
+
+$text_color: #2b2b2b;
+$sub_text_color: #646464;
+$third_text_color: #5a5a5a;
+$font_family: "Rubik";
+$bg_color: #f4f4f4;
+
+@mixin text_style($f_size, $f_weight, $f_color) {
+  font-family: $font_family;
+  color: $f_color;
+  font-size: $f_size;
+  font-weight: $f_weight;
+}
+
+.footer_wrapper {
+  background-color: $bg_color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 357px;
+  .container {
+    width: 68%;
+    margin: 0 auto;
   }
-  
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  gap:25px;
+ 
+}
+
+.footer_text {
+  max-width: 337px;
+  display: flex;
+  flex-direction: column;
+  gap:23px;
+
+  p {
+    @include text_style(15px, 400, $third_text_color);
+    margin-bottom: 10px;
+  }
+}
+
+.icons {
+  display: flex;
+  justify-content: space-between;
+  max-width: 151px;
+  max-height: 37px;
+  gap:20px;
+}
+
+.footer_block{
+  display: flex;
+  justify-content: space-between;
+  gap:10px;
+  width: 100%;
+  min-width: clamp(315px, 33vw + 10px, 800px);
+}
+
+@media (max-width: 1024px) {
+  .footer_wrapper{
+  .container{
+    width: 82%;
+  }}
+}
+@media (max-width: 750px) {
+  .footer_wrapper{
+    padding-top: clamp(33px,3vw + 7px, 50px);
+    padding-bottom: clamp(33px,3vw + 7px, 50px);
+
+  }
+  .footer{
+    flex-direction: column-reverse;
+    align-items: space-between;
+    gap: 51px;
+  }
+  .footer_text{
+    align-items: center;
+    text-align: center;
+  }
+}
+

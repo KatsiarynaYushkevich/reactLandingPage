@@ -11,9 +11,11 @@
 }
 
 $text_color: #2B2B2B;
+$sub_text_color: #646464;
+$font_family: 'Rubik';
 
 @mixin header_text_style($f_size: 20px, $f_weight: 400) {
-  font-family: 'Rubik';
+  font-family: $font_family;
   color: $text_color;
   font-size: $f_size;
   font-weight: $f_weight;
@@ -30,9 +32,12 @@ $text_color: #2B2B2B;
 
     a{
       text-decoration: none;
-      font-family: 'Rubik';
-      color:#2B2B2B;
+      color:$text_color;
       @include header_text_style(clamp(0.75rem, 0.4667rem + 0.58vw, 1rem), 400);
+
+      &:hover{
+        color:$sub_text_color;
+      }
     }
   }
 

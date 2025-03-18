@@ -17,9 +17,9 @@ export default function PlanCard(props) {
           <ListItem f_weigth='regular' text='Unlimited bandwitch'/>
           <ListItem f_weigth='regular' text='Encrypted connection'/>
           <ListItem f_weigth='regular' text='Yes trafic logs'/>
-          <ListItem hidden={props.hide4} f_weigth='regular' text='Works on all devices'/>
-          <ListItem hidden={props.hide5} f_weigth='regular' text='Connect anyware'/>
-          <ListItem hidden={props.hide6} f_weigth='regular' text='Get new features'/>
+          <ListItem hidden={props.hide4} f_weight='regular' text='Works on all devices'/>
+          <ListItem hidden={props.hide5} f_weight='regular' text='Connect anyware'/>
+          <ListItem hidden={props.hide6} f_weight='regular' text='Get new features'/>
           </div>
         </div>
        <div className="plan_price">

@@ -7,7 +7,7 @@ export default function ListItem(props) {
       <div className="item_img">
         <img src={circle_icon} alt="circle_icon" />
       </div>
-      <p className={props.f_weigth}>{props.text}</p>
+      <p className={props.f_weight}>{props.text}</p>
     </div>
   );
 }

@@ -20,6 +20,7 @@ main{
   min-height: clamp(65px, 8vw - 2px, 114px);
   display:flex;
   align-items: center;
+  justify-content: center;
   gap:clamp(52px, 13vw + 3px, 190px);
   margin: auto;
   box-shadow: 7px 13px 35px rgba(174, 174, 174, 0.5);
@@ -67,7 +68,11 @@ margin-bottom: clamp(50px, 6vw + 5px, 91px);
  border-radius: 20px;
  min-height: 181px;
  box-shadow: 7px 13px 35px rgba(174, 174, 174, 0.5);
+ position: relative;
+ top:20px;
+ z-index: 1;
 }
+
 @media (max-width: 750px) {
   .container {
     max-width: 90%;
@@ -86,5 +91,9 @@ margin-bottom: clamp(50px, 6vw + 5px, 91px);
 
   .subscribe_wrapper{
     min-height: 310px;
+    position: static;
+  }
+  main{
+    margin-bottom: 30px;
   }
 }

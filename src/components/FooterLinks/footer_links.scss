@@ -1,0 +1,48 @@
+@font-face {
+  font-family: "Rubik";
+  font-weight: 400;
+  src: url("../../assets/Rubik-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Rubik";
+  font-weight: 600;
+  src: url("../../assets/Rubik-SemiBold.ttf") format("truetype");
+}
+
+$text_color: #151515;
+$sub_text_color: #646464;
+$font_family: "Rubik";
+
+@mixin text_style($f_size, $f_weight, $f_color) {
+  font-family: $font_family;
+  color: $f_color;
+  font-size: $f_size;
+  font-weight: $f_weight;
+}
+
+.hidden {
+  display: none;
+}
+
+.visible{
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.faq_block {
+  a {
+    text-decoration: none;
+    @include text_style(clamp(12px, 1vw + 2px, 15px), 400, $sub_text_color);
+    &:hover{
+        color: $text_color;
+    }
+  }
+  span {
+    @include text_style(clamp(13.6px, 1vw + 2px, 16px), 600, $text_color);
+  }
+
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}

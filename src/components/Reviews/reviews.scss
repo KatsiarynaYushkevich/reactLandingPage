@@ -1,3 +1,5 @@
+$hover_color:#f53838;
+
 .reviews{
     width: 100%;
     display: flex;
@@ -28,6 +30,7 @@
 .arrows{
     display: flex;
     gap: clamp(28px, 3vw - 1px, 42px);
+
 }
 .scroll_buttons{
     width: 100%;
@@ -40,6 +43,10 @@
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 50%;
-    border: none;
+    border: none;  
+    cursor: pointer;
+    &:hover{
+        background-color:#c02020;
+      }
     }
 }
