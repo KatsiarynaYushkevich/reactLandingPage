@@ -1,25 +1,4 @@
-@font-face {
-  font-family: 'Rubik';
-  font-weight: 400; 
-  src: url('../../assets/Rubik-Regular.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Rubik';
-  font-weight: 600;
-  src: url('../../assets/Rubik-SemiBold.ttf') format('truetype');
-}
-
-$text_color: #2B2B2B;
-$sub_text_color: #646464;
-$font_family: 'Rubik';
-
-@mixin header_text_style($f_size: 20px, $f_weight: 400) {
-  font-family: $font_family;
-  color: $text_color;
-  font-size: $f_size;
-  font-weight: $f_weight;
-}
+@use "../../style/index.scss" as *;
 
 .container {
   max-width: 80%;
@@ -27,13 +6,13 @@ $font_family: 'Rubik';
 }
 
 .header_wrapper {
-    background-color: #fff;
+
     margin-bottom: clamp(18px, 4vw + 10px, 67px);
 
     a{
       text-decoration: none;
       color:$text_color;
-      @include header_text_style(clamp(0.75rem, 0.4667rem + 0.58vw, 1rem), 400);
+      @include text_style(clamp(0.75rem, 0.4667rem + 0.58vw, 1rem), 400);
 
       &:hover{
         color:$sub_text_color;
@@ -70,14 +49,14 @@ $font_family: 'Rubik';
   flex-direction: column;
   gap: clamp(10px,4vw - 2px, 42px);
   h1{
-    @include header_text_style(clamp(32px, 4vw - 7px, 50px), 400);
+    @include text_style(clamp(32px, 4vw - 7px, 50px), 400);
     span{
-      @include header_text_style(clamp(32px, 4vw - 7px, 50px), 600);
+      @include text_style(clamp(32px, 4vw - 7px, 50px), 600);
     }
   }
 
   p{
-    @include header_text_style(clamp(10px, 1vw + 2px, 16px), 400);
+    @include text_style(clamp(10px, 1vw + 2px, 16px), 400);
     margin-bottom: 16px;
   }
 }
@@ -90,7 +69,7 @@ $font_family: 'Rubik';
 .header_img{
   max-width:clamp(306px, 40vw, 569px);
   max-height: 356px;
-  border: 1px solid #2B2B2B;
+  border: 1px solid $text_color;
 
   img{
     width: 100%;

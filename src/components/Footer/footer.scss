@@ -1,27 +1,5 @@
-@font-face {
-  font-family: "Rubik";
-  font-weight: 400;
-  src: url("../../assets/Rubik-Regular.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Rubik";
-  font-weight: 600;
-  src: url("../../assets/Rubik-SemiBold.ttf") format("truetype");
-}
-
-$text_color: #2b2b2b;
-$sub_text_color: #646464;
-$third_text_color: #5a5a5a;
-$font_family: "Rubik";
+@use "../../style/index.scss" as *;
 $bg_color: #f4f4f4;
-
-@mixin text_style($f_size, $f_weight, $f_color) {
-  font-family: $font_family;
-  color: $f_color;
-  font-size: $f_size;
-  font-weight: $f_weight;
-}
 
 .footer_wrapper {
   background-color: $bg_color;

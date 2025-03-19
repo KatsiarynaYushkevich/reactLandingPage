@@ -1,36 +1,17 @@
-@font-face {
-  font-family: "Rubik";
-  font-weight: 400;
-  src: url("../../assets/Rubik-Regular.ttf") format("truetype");
-}
+@use "../../style/index.scss" as *;
 
-@font-face {
-  font-family: "Rubik";
-  font-weight: 600;
-  src: url("../../assets/Rubik-SemiBold.ttf") format("truetype");
-}
-
-$main_text_color: #fff;
-$sub_text_color: #2b2b2b;
-$bg_color: #f53838;
-$hover_color: #c02020;
-$font_family: 'Rubik';
-
-@mixin btn_text_style($font_size, $font_color) {
-  color: $font_color;
-  font-size: $font_size;
-  font-family: $font_family;
-}
+$btn_text_color: #fff;
+$btn_bg_color: #f53838;
 
 .custom_btn {
   border: none;
   cursor: pointer;
   border-radius: clamp(12px, 1vw + 6px, 20px);
-  @include btn_text_style(clamp(12px, 1vw + 4px, 18px), $main_text_color);
+  @include text_style(clamp(12px, 1vw + 4px, 18px),600, $btn_text_color);
 
   &.red {
-    background-color: $bg_color;
-    &:hover{
+    background-color: $btn_bg_color;
+    &:hover {
       background-color: $hover_color;
     }
   }
@@ -55,11 +36,11 @@ $font_family: 'Rubik';
   &.header_btn {
     min-width: clamp(70px, 7vw + 1px, 101px);
     min-height: clamp(24px, 2vw + 8px, 36px);
-    @include btn_text_style(clamp(12px, 1vw + 2px, 16px), $sub_text_color);
+    @include text_style(clamp(12px, 1vw + 2px, 16px),400, $text_color);
 
     &:hover {
-      border: 2px solid $bg_color;
-      color: $bg_color;
+      border: 2px solid $btn_bg_color;
+      color: $btn_bg_color;
     }
   }
 
@@ -68,7 +49,7 @@ $font_family: 'Rubik';
     min-height: clamp(25px, 3vw + 2px, 45px);
   }
 
-  &.subscribe_btn{
+  &.subscribe_btn {
     min-width: 244px;
     min-height: 57px;
     font-size: 18px;

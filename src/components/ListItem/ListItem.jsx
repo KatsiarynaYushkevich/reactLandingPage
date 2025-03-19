@@ -1,4 +1,4 @@
-import circle_icon from "../../assets/circle_icon.svg"
+import circle_icon from "../../assets/circle_icon.svg";
 import "./list_item.scss";
 
 export default function ListItem(props) {

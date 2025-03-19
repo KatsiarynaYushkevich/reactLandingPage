@@ -4,7 +4,8 @@
   display: flex;
   gap: clamp(16px, 2vw, 29px);
   justify-content: space-around;
-
 }
 
-::-webkit-scrollbar { display: none; }
+::-webkit-scrollbar {
+  display: none;
+}

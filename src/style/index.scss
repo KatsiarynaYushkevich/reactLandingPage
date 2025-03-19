@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Rubik";
+  font-weight: 400;
+  src: url("../assets/Rubik-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Rubik";
+  font-weight: 500;
+  src: url("../assets/Rubik-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Rubik";
+  font-weight: 600;
+  src: url("../assets/Rubik-SemiBold.ttf") format("truetype");
+}
+
+$hover_color: #c02020;
+$font_family: "Rubik";
+$text_color: #2b2b2b;
+$sub_text_color: #646464;
+$third_text_color: #5a5a5a;
+
+@mixin text_style($f_size, $f_weight, $f_color: $text_color) {
+  font-family: $font_family;
+  color: $f_color;
+  font-size: $f_size;
+  font-weight: $f_weight;
+}
