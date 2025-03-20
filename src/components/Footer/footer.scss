@@ -49,6 +49,26 @@ $bg_color: #f4f4f4;
   min-width: clamp(315px, 33vw + 10px, 800px);
 }
 
+.faq_block {
+  a {
+    text-decoration: none;
+    span{
+      @include text_style(clamp(12px, 1vw + 2px, 15px), 400, $sub_text_color);
+    }
+
+    &:hover{
+      color: $text_color;
+    }
+  }
+  span {
+    @include text_style(clamp(13.6px, 1vw + 2px, 16px), 600, $text_color);
+  }
+
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
 @media (max-width: 1024px) {
   .footer_wrapper{
   .container{
